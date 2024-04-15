@@ -1,0 +1,34 @@
+/* estilos.css */
+
+body {
+    color: #6C757D; /* Cor dos botões */
+}
+
+h1 {
+    color: #001F3F; /* Azul Marinho */
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #6C757D; /* Cinza */
+    border-color: #6C757D; /* Cinza */
+    margin-left: 10px; /* Espaçamento entre os botões */
+}
+
+.btn-secondary {
+    background-color: #6C757D; /* Cinza */
+    border-color: #6C757D; /* Cinza */
+    margin-left: 10px; /* Espaçamento entre os botões */
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: #5a6268; /* Tom mais escuro do cinza */
+    border-color: #5a6268; /* Tom mais escuro do cinza */
+}
+
+.custom-container {
+    max-width: 800px; /* Largura máxima do container */
+    margin-left: auto; /* Margem à esquerda */
+    margin-right: auto; /* Margem à direita */
+}
