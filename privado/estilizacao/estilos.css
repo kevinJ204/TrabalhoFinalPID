@@ -1,34 +1,32 @@
-/* estilos.css */
-
 body {
-    color: #6C757D; /* Cor dos botões */
+    color: #6C757D; 
 }
 
 h1 {
-    color: #001F3F; /* Azul Marinho */
+    color: #001F3F; 
     margin-bottom: 20px;
 }
 
 .btn-primary {
-    background-color: #6C757D; /* Cinza */
-    border-color: #6C757D; /* Cinza */
-    margin-left: 10px; /* Espaçamento entre os botões */
+    background-color: #6C757D; 
+    border-color: #6C757D; 
+    margin-left: 10px; 
 }
 
 .btn-secondary {
-    background-color: #6C757D; /* Cinza */
-    border-color: #6C757D; /* Cinza */
-    margin-left: 10px; /* Espaçamento entre os botões */
+    background-color: #6C757D; 
+    border-color: #6C757D; 
+    margin-left: 10px; 
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
-    background-color: #5a6268; /* Tom mais escuro do cinza */
-    border-color: #5a6268; /* Tom mais escuro do cinza */
+    background-color: #5a6268; 
+    border-color: #5a6268; 
 }
 
 .custom-container {
-    max-width: 800px; /* Largura máxima do container */
-    margin-left: auto; /* Margem à esquerda */
-    margin-right: auto; /* Margem à direita */
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
