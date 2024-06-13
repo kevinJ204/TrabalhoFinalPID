@@ -1,73 +1,45 @@
-import DevolucaoDAO from "../Persistencia/DevolucaoDAO.js";
-
 export default class Devolucao {
-    #id;
-    #aluno;
-    #titulo;
-    #data;
-
-    constructor(id=0, aluno="", titulo="", data=new Date()) {
-        this.#id = id;
-        this.#aluno = aluno;
-        this.#titulo = titulo;
-        this.#data = data;
+    constructor(id, aluno, titulo, data, dao) {
+        this.id = id;
+        this.aluno = aluno;
+        this.titulo = titulo;
+        this.data = data;
+        this.dao = dao;
     }
 
     getId() {
-        return this.#id;
+        return this.id;
     }
-    setId(id) {
-        this.#id = id;
-    }
+
     getAluno() {
-        return this.#aluno;
+        return this.aluno;
     }
-    setAluno(aluno) {
-        this.#aluno = aluno;
-    }
+
     getTitulo() {
-        return this.#titulo;
+        return this.titulo;
     }
-    setTitulo(titulo) {
-        this.#titulo = titulo;
-    }
+
     getData() {
-        return this.#data;
-    }
-    setData(data) {
-        this.#data = data;
+        return this.data;
     }
 
-    async gravar(){
-        const dao = new DevolucaoDAO();
-        await dao.gravar(this); 
+    setId(id) {
+        this.id = id;
     }
 
-    async atualizar(){
-        const dao = new DevolucaoDAO();
-        await dao.atualizar(this);
+    async gravar(conexao) {
+        await this.dao.gravar(conexao, this);
     }
 
-    async excluir(){
-        const dao = new DevolucaoDAO();
-        await dao.excluir(this);
+    async atualizar(conexao) {
+        await this.dao.atualizar(conexao, this);
     }
 
-    async consultar(termoDePesquisa){
-        const dao = new DevolucaoDAO();
-        return await dao.consultar(termoDePesquisa);
+    async excluir(conexao) {
+        await this.dao.excluir(conexao, this);
     }
 
-    toString(){
-        return `Devolucao id: ${this.#id} -  aluno: ${this.#aluno}`;
-    }
-
-    toJSON(){
-        return {
-            "id": this.#id,
-            "aluno": this.#aluno,
-            "titulo": this.#titulo,
-            "data": this.#data
-        }
+    static async consultar(conexao, termoDePesquisa, dao) {
+        return await dao.consultar(conexao, termoDePesquisa);
     }
 }
