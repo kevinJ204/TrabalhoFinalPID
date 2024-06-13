@@ -1,3 +1,5 @@
+import mysql from 'mysql2/promise';
+
 class Conexao {
     constructor() {
         if (!Conexao.instance) {
